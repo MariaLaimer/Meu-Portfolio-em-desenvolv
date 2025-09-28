@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Meu Portfolio: Maria Laimer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 
 <body>
     <div class="container">
+        <!-- Cabeçalho: -->
         <header>
             <div class="brand">
-                <div class="logo">ME</div>
+                <div class="logo">M.L</div>
                 <div>
                     <h1>Maria Laimer</h1>
-                    <div style="font-size:13px;color:var(--muted)">Estudante de Ciência da Computação ♥</div>
+                    <div style="font-size:13px;color:var(--muted)">Estudante de Ciência da Computação e mãe de gatos ♥</div>
                 </div>
             </div>
             <nav>
@@ -30,7 +32,7 @@
             <!-- Sobre mim: -->
             <section id="about" class="about" aria-labelledby="about-title">
                 <div class="perfil">
-                    <img src="Eu.png" alt="Foto minha">
+                    <img src="recursos/Eu.png" alt="Foto minha">
                 </div>
                 <div class="about-info">
                     <div class="section-title">
@@ -78,11 +80,26 @@
                 </div>
                 <div class="skill-list" id="skill-list">
                     <!-- Cada hbabilidade: -->
-                    <div class="skill">Java</div>
-                    <div class="skill">Python</div>
-                    <div class="skill">Html</div>
-                    <div class="skill">JavaScript</div>
-                    <div class="skill">Git</div>
+                    <div class="skill">
+                        <i class="devicon-java-plain" title="Java"></i>
+                        <span>Java</span>
+                    </div>
+                    <div class="skill">
+                        <i class="devicon-python-plain" title="Python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill">
+                        <i class="devicon-html5-plain" title="HTML5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill">
+                        <i class="devicon-javascript-plain" title="JavaScript"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill">
+                        <i class="devicon-github-plain" title="GitHub"></i>
+                        <span>GitHub</span>
+                    </div>
                 </div>
             </section>
 
@@ -96,56 +113,31 @@
                 <div style="position:relative;">
                     <div class="carousel" id="carousel">
                         <div class="project" tabindex="0">
-                            <img src="">
-                                alt="Projeto 1">
+                            <img src="recursos/Biblioteca Java.png" alt="Projeto 1">
                             <div class="overlay">
                                 <div>
-                                    <h4>Cooking with Aggression</h4>
-                                    <p>Um jogo em Python com Pygame - reconhecimento de voz e chefões.</p>
+                                    <h4>Biblioteca Java</h4>
+                                    <p>Sistema de biblioteca com Java - POO.</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="project" tabindex="0">
-                            <img src=""
-                                alt="Projeto 2">
+                            <img src="recursos/Pandas.png" alt="Projeto 2">
                             <div class="overlay">
                                 <div>
-                                    <h4>Portfolio Website</h4>
-                                    <p>Website estático feito com HTML, CSS e JS (este mesmo!).</p>
+                                    <h4>Análise de leituras</h4>
+                                    <p>Uso do Google Colaboratory e Pandas para análise de dados recolhidos por pesquisa.</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="project" tabindex="0">
-                            <img src=""
-                                alt="Projeto 2">
+                            <img src="recursos/Estoque python.png" alt="Projeto 2">
                             <div class="overlay">
                                 <div>
-                                    <h4>Portfolio Website</h4>
-                                    <p>Website estático feito com HTML, CSS e JS (este mesmo!).</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project" tabindex="0">
-                            <img src=""
-                                alt="Projeto 2">
-                            <div class="overlay">
-                                <div>
-                                    <h4>Teste</h4>
-                                    <p>Teste.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project" tabindex="0">
-                            <img src=""
-                                alt="Projeto 3">
-                            <div class="overlay">
-                                <div>
-                                    <h4>Data Visualizations</h4>
-                                    <p>Um conjunto de visualizações interativas em JS para mostrar dados.</p>
+                                    <h4>Sistema Python</h4>
+                                    <p>Sistema de gerenciamento de estoque feito em Python - POO.</p>
                                 </div>
                             </div>
                         </div>
@@ -163,43 +155,63 @@
             <section id="certs" class="certs" aria-labelledby="certs-title">
                 <div class="section-title">
                     <h3 id="certs-title">Certificados:</h3>
-                    <div class="section-sub">Cursos & Outros...</div>
+                    <div class="section-sub">Cursos, Eventos, Outros...</div>
                 </div>
                 <!-- Cada certificado: -->
                 <div class="certs-grid">
                     <div class="cert" tabindex="0">
-                        <img src=""
-                            alt="Certificate 1">
-                        <h5>Introdução a Python</h5>
-                        <p>Coursera - 2024</p>
+                        <img src="recursos/Cert_Pred.jpg" alt="Certificado de Análise de Dados"
+                            onclick="openModal(this)">
+                        <h5>Análise de Dados Completo no Excel</h5>
+                        <p>Preditiva.ai - 2025</p>
                     </div>
 
                     <div class="cert" tabindex="0">
-                        <img src=""
-                            alt="Certificate 2">
-                        <h5>Desenvolvimento Web</h5>
-                        <p>freeCodeCamp - 2023</p>
+                        <img src="recursos/Cert_Brad.jpg" alt="Certificado de Hardware e Software"
+                            onclick="openModal(this)">
+                        <h5>Fundamentos de TI: Hardware e Software</h5>
+                        <p>Fundação Bradesco - 2025</p>
                     </div>
 
-                    <!-- Teste de certificado sem foto: -->
                     <div class="cert" tabindex="0">
+                        <img src="recursos/Cert_Malv.jpg" alt="Certificado de Inglês Avançado (C1)"
+                            onclick="openModal(this)">
+                        <h5>Inglês Avançado (nível C1)</h5>
+                        <p>Malvern House - 2024</p>
+                    </div>
+
+                    <div class="cert" tabindex="0">
+                        <img src="recursos/Cert_Med.png" alt="Certificado e Medalha Ensino Médio"
+                        onclick="openModal(this)">
+                        <h5>Menção Honrosa em Física Sustentável + Medalha de prata Aluna em Destaque</h5>
+                        <p>Fleming Ensino Médio- 2023</p>
+                    </div>
+
+                    <!-- Teste de certificado sem foto: 
+                     <div class="cert" tabindex="0">
                         <div
                             style="height:120px;display:flex;align-items:center;justify-content:center;border-radius:8px;background:linear-gradient(180deg,rgb(124, 58, 237, 0.09), rgba(255,255,255,0.02));font-weight:700">
                             CERT</div>
                         <h5>Algoritmos e Estruturas</h5>
                         <p>Universidade - 2022</p>
-                    </div>
+                    </div>-->
+                    
                 </div>
             </section>
 
         </main>
 
         <footer> <!-- Rodapé fofo :3 -->
-            © <span id="year"></span> Maria — Powered by coffee & creativity.
+            © <span id="year"></span> Maria — Powered by coffee & creativity ;)
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImg">
+        <div id="modalLegenda"></div>
+    </div>
+
     <!-- Animação fundo bolhas: -->
     <div class="bolhas">
         <div class="bolha"></div>
@@ -208,6 +220,7 @@
         <div class="bolha"></div>
         <div class="bolha"></div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

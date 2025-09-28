@@ -1,5 +1,5 @@
 :root {
-    --bg: #06070a;
+    --bg: #010620;
     /*Fundo*/
     --card: #0e1418;
     /* Cartão / Superfície */
@@ -7,13 +7,10 @@
     /* Texto secundário */
     --muted-2: #7f8a94;
     /* Subtítulo */
-    --accent: #7c3aed;
-    /* oxo suave */
-    --glass: rgba(255, 255, 255, 0.02);
     --glass-border: rgba(255, 255, 255, 0.04);
     --logo-bg: linear-gradient(135deg, rgba(124, 58, 237, 0.14), rgba(124, 58, 237, 0.06));
     --radius: 12px;
-    --shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+    --shadow: 0 8px 30px rgb(8, 4, 19);
 }
 
 * {
@@ -28,8 +25,7 @@ body {
 body {
     margin: 0;
     font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    background: radial-gradient(1200px 400px at 0%, rgba(124, 58, 237, 0.035), transparent), var(--bg);
-    color: rgba(124, 58, 237, 0.035);
+    background: radial-gradient(1200px 400px at 0%, rgba(58, 100, 237, 0.137), transparent), var(--bg);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     padding: 40px 32px;
@@ -47,7 +43,7 @@ header {
     justify-content: space-between;
     margin-bottom: 28px;
     padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(11, 126, 141, 0.288);
 }
 
 .brand {
@@ -65,9 +61,9 @@ header {
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    color: var(--accent);
+    color: rgba(11, 126, 141, 0.288);
     box-shadow: 0 6px 22px rgba(124, 58, 237, 0.08), inset 0 -6px 18px rgba(0, 0, 0, 0.45);
-    border: 1px solid rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(11, 126, 141, 0.288);
 }
 
 .brand h1 {
@@ -89,8 +85,8 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-    background: rgba(255, 255, 255, 0.02);
-    color: #ffffff;
+    background: rgba(11, 126, 141, 0.288);
+    color: #caadfd;
     transform: translateY(-2px);
 }
 
@@ -105,7 +101,7 @@ main {
     display: flex;
     gap: 26px;
     align-items: center;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.00));
+    background: linear-gradient(180deg, rgba(5, 1, 46, 0.164), rgba(11, 126, 141, 0.171));
     padding: 20px;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
@@ -121,7 +117,7 @@ main {
     height: 160px;
     object-fit: cover;
     border-radius: 18px;
-    border: 1px solid rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(11, 126, 141, 0.288);
     filter: saturate(0.95) contrast(0.95) brightness(0.98);
     transition: transform 320ms ease, filter 320ms ease;
 }
@@ -139,7 +135,6 @@ main {
     margin: 0 0 8px 0;
     font-family: 'Playfair Display';
     font-size: 22px;
-    color: #EDF2F7;
 }
 
 .about-info p {
@@ -161,8 +156,7 @@ main {
     gap: 10px;
     padding: 8px 12px;
     border-radius: 10px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.00));
-    border: 1px solid rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(11, 126, 141, 0.288);
     color: var(--muted);
     font-weight: 600;
     transition: transform 160ms, background-color 160ms, color 160ms;
@@ -170,7 +164,7 @@ main {
 
 .sbtn:hover {
     transform: translateY(-4px);
-    color: #fff;
+    color: #caadfd;
 }
 
 /*Títulos: */
@@ -199,7 +193,7 @@ main {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.00));
     padding: 16px;
     border-radius: var(--radius);
-    border: 1px solid var(--glass-border);
+    border: 1px solid rgba(11, 126, 141, 0.288);
 }
 
 .skill-list {
@@ -209,22 +203,35 @@ main {
 }
 
 .skill {
+    align-items: center;
     padding: 10px 14px;
     border-radius: 12px;
+    display: flex;
+    flex-direction: column;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.03);
     font-weight: 600;
-    color: #EAF2F7;
+    color:#caadfd;
 }
 
-/* Projects carousel */
+.skill i {
+    font-size: 50px; /*Aumenta o ícone habiliadades*/
+    background: linear-gradient(45deg, #7c3aed, #b4e2c9); /*Gradiente */
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; /*Isso tudo pra deixar com gradiente*/
+    background-clip: text; 
+    color: transparent;
+    margin-bottom: 6px; /*Espaço entre ícone e texto */
+}
+
+/*Carrossel de Projetinhos meus: */
 .projects {
     position: relative;
     overflow: hidden;
     padding: 14px;
     border-radius: var(--radius);
     background: transparent;
-    border: 1px solid var(--glass-border);
+    border: 1px solid rgba(11, 126, 141, 0.288);
 }
 
 .carousel {
@@ -236,11 +243,12 @@ main {
 .project {
     min-width: 260px;
     min-height: 160px;
+    max-height: 160px;
     border-radius: 12px;
     overflow: hidden;
     position: relative;
     flex: 0 0 300px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.00));
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0.01), rgba(255, 255, 255, 0.00));
     border: 1px solid rgba(255, 255, 255, 0.03);
     transition: transform 260ms ease, box-shadow 260ms ease;
 }
@@ -267,7 +275,7 @@ main {
 .overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0) 30%, rgba(0, 0, 0, 0.72));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0) 30%, rgb(4, 1, 20));
     display: flex;
     align-items: flex-end;
     padding: 18px;
@@ -286,7 +294,7 @@ main {
 .overlay h4 {
     margin: 0;
     font-size: 16px;
-    color: #fff;
+    color: #b4e2c9;
 }
 
 .overlay p {
@@ -320,9 +328,9 @@ main {
 }
 
 /* Certificados: */
-.certs-grid {
+.certs-grid { /*Aqui muda o jeito que os certificados ficam 'alocados'*/
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(4, minmax(200px, 1fr)); /*4 Certificados por linha!*/
     gap: 14px;
 }
 
@@ -330,17 +338,29 @@ main {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.00));
     padding: 12px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(11, 126, 141, 0.288);
     text-align: center;
-    color: #7c3aed;
+    color: #b4e2c9;
 }
 
 .cert img {
     width: 100%;
-    height: 120px;
+    height: 180px;
     object-fit: cover;
     border-radius: 8px;
-    filter: saturate(0.95) contrast(0.95);
+    cursor: pointer;
+    transition: transform 420ms cubic-bezier(.2, .9, .2, 1), 
+                filter 420ms ease, 
+                box-shadow 420ms ease;
+    filter: contrast(0.96) saturate(0.9) brightness(0.95);
+}
+
+/* Animação no hover */
+.cert img:hover {
+    transform: scale(1.06) translateY(-4px);
+    filter: contrast(1.05) saturate(1.05) brightness(1.02);
+    box-shadow: 0 12px 28px rgba(2, 6, 23, 0.65),
+                0 0 12px rgba(129, 72, 228, 0.45); /* leve glow roxo */
 }
 
 .cert h5 {
@@ -361,13 +381,44 @@ footer {
     text-align: center;
 }
 
+/* Estilo do modal(zoom certificados) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+}
+
+.modal img {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+
 /* Mini interações: */
 :focus {
     outline: none;
 }
 
 a:focus {
-    box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.12);
+    box-shadow: 0 0 0 4px rgba(76, 58, 237, 0.12);
     border-radius: 8px;
 }
 
@@ -424,7 +475,7 @@ main>section {
     bottom: -650px;
     width: 40px;
     height: 40px;
-    background: rgba(124, 58, 237, 0.15);
+    background: rgba(11, 126, 141, 0.336);
     /* roxo suave */
     border-radius: 50%;
     animation: rise 12s infinite ease-in;
@@ -477,61 +528,29 @@ main>section {
 }
 
 /* Responsividade para tablets e celulares: */
-@media (max-width: 800px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    nav a {
-        margin: 0;
-        padding: 8px 12px;
-    }
-
-    .about {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .about-info {
-        margin-top: 14px;
-    }
-
-    .socials {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+/* Ajusta grade de certificados para se adaptar */
+@media (max-width: 900px) {
+  .certs-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 por linha em tablets */
+  }
 }
 
 @media (max-width: 500px) {
-    body {
-        padding: 16px;
-    }
+  .certs-grid {
+    grid-template-columns: 1fr; /* 1 por linha no celular */
+  }
 
-    .brand h1 {
-        font-size: 18px;
-    }
+  .perfil img {
+    width: 120px;
+    height: 120px; /* menor para caber melhor */
+  }
 
-    .logo {
-        width: 48px;
-        height: 48px;
-    }
+  .project {
+    flex: 0 0 100%; /* ocupa toda a largura no carrossel */
+    min-width: auto;
+  }
 
-    .perfil img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .project {
-        flex: 0 0 100%;
-        /* Cada Projeto ocupa largura inteira no celular */
-    }
+  body {
+    padding: 10px;
+  }
 }
